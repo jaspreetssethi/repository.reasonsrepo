@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.animedubbedreasonsrp" name="Anime Dubbed" version="1.0.0" provider-name="Reasons">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.urlresolver"  version="3.0.0"/>
+    <import addon="script.module.addon.common" />
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="repository.reasonsrepo" version="1.0.0"/>
+    <import addon="script.module.requests" version="2.4.3"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  <summary>Watch any dubbed anime for free</summary>
+	<description lang="en">Watch any dubbed and subbed anime shows/movies for free</description>
+	<disclaimer lang="en">Dubbed Anime addon is a web scraper coded to crawl and index dubbedanime.net. This addon doesn't host any content therefore ReasonsRepo is not responsible for the accuracy, compliance, copyright, legality, decency, or any other aspect of the content from the scraped sites.</disclaimer>
+  <news>[B]Version 1.0.0 - 25 Aug 2018[/B] - Initial Release</news>
+	<platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.bdmoviezone"
 version="0.1.3"
 name="BD MovieZone"
@@ -30,13 +52,54 @@ provider-name="Reasons">
   </extension>
 </addon>
 
+<addon id="plugin.video.deccandelight"
+version="1.7.1"
+name="Deccan Delight"
+provider-name="gujal">
+<requires>
+  <import addon="xbmc.python" version="2.20.0"/>
+  <import addon="script.module.requests" version="2.4.3"/>
+  <import addon="script.module.beautifulsoup" version="3.2.1"/>
+  <import addon="script.module.resolveurl" version="5.0.00"/>
+  <import addon="script.common.plugin.cache" version="2.5.5"/>
+  <import addon="script.module.youtube.dl" version="17.709.0"/>
+  <import addon="plugin.video.f4mTester" version="2.2.3"/>
+  <import addon="repository.reasonsrepo" version="1.0.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+	<summary>Entertainment from the Deccan region of India</summary>
+	<description>This addon provides access to entertainment in various Deccan languages such as Tamil, Telugu, Malayalam, Kannada, and Hindi
+DeccanDelight is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.
+DeccanDelight and its developers [B]DO NOT[/B] host, create, or distribute any of the content displayed in the addon, it simply scrapes ad financed public websites.</description>
+	<platform>all</platform>
+	<website>https://github.com/Gujal00/GujalKodiWork</website>
+	<disclaimer>DeccanDelight and its developers are not in any way affiliated with Kodi or any of the sites and providers used in the addon.</disclaimer>
+	<news>
+[B]Version 1.7.1 - 21st Dec 2018[/B]
+ - [COLOR blue]Reasons[/COLOR] [COLOR yellow]Repository[/COLOR]
+ - Added Desi Serials
+	</news>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+		<screenshot>resources/images/screenshot-01.jpg</screenshot>
+		<screenshot>resources/images/screenshot-02.jpg</screenshot>
+		<screenshot>resources/images/screenshot-03.jpg</screenshot>
+	</assets>
+</extension>
+</addon>
+
 <addon id="plugin.video.einthusan"
        name="Einthusan"
-       version="1.4.0"
-       provider-name="humla">
+       version="1.4.5"
+       provider-name="humla,ReasonsRepo">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.requests" version="2.0.0" />
+        <import addon="script.module.requests" version="2.7.0" />
+        <import addon="repository.reasonsrepo" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource"
                library="default.py">
@@ -45,15 +108,18 @@ provider-name="Reasons">
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary>Watch Hindi, Tamil  movies</summary>
-        <description>This XBMC plugin allows to watch all movies from Einthusan.tv. Please support them.
+        <description>This XBMC plugin allows to watch Hindi and Tamil movies from Einthusan.com. Please support them.
+        Fixed everything, the addon should be working fine now [COLOR blue]Reasons[/COLOR] [COLOR yellow]Repository[/COLOR].
 
+        Credits to Humla for creating the addon, but he probably stopped supporting it, so I, [COLOR blue]Reasons[/COLOR] [COLOR yellow]Repository[/COLOR] am taking over this project.
+        I don't watch bollywood movies so dont use this addon, so if it breaks then please let me know.
+        My contact info is available on my website or my github Repository.
         Credits to suriya222 for the thumbnails.</description>
-		<news>[B]Version 1.4.0 - 11th May 2018[/B] - Fixed Recent movies list</news>
     </extension>
 </addon>
 
 <addon id="plugin.video.movierulz"
-version="0.1.0"
+version="0.1.1"
 name="Movie Rulz"
 provider-name="Reasons">
 <requires>
@@ -106,13 +172,37 @@ provider-name="Reasons">
   </extension>
 </addon>
 
-<addon id="plugin.video.reasonsrepotestaddon" name="Reasons Repo Test Addon" version="0.00.0" provider-name="Reasons">
+<addon id="plugin.video.reasonshdvix" name="HDVix Movies" version="1.0.0" provider-name="Reasons">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.urlresolver"  version="3.0.0"/>
     <import addon="script.module.addon.common" />
     <import addon="script.module.metahandler" version="2.5.1"/>
     <import addon="repository.reasonsrepo" version="1.0.0"/>
+    <import addon="script.module.requests" version="2.4.3"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  <summary>HDVix Movies</summary>
+	<description lang="en">This is a brand new addon to watch movies from HDVIX.com</description>
+	<disclaimer lang="en">This addon doesn't host any content, so ReasonsRepository is not responsible for any copyrighted content. So don't sue the developer :P </disclaimer>
+  <news>[B]Version 1.0.0 - 16 Sept 2018[/B] - Initial Release</news>
+	<platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.reasonsrepotestaddon" name="Reasons Repo Test Addon" version="0.00.2" provider-name="Reasons">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.urlresolver"  version="3.0.0"/>
+    <import addon="script.module.addon.common" />
+    <import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="repository.reasonsrepo" version="1.0.0"/>
+    <import addon="script.module.requests" version="2.4.3"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
     </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
